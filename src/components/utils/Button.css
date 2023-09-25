@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+button {
+  border: none;
+  background: #004A86;
+  color: #FFF;
+
+  min-width: 250px;
+  height: 50px;
+  border-radius: 3px;
+
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+}
