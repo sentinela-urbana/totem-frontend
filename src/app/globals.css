@@ -2,3 +2,46 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+#login-wrapper {
+  text-align: center;
+  padding: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#login-wrapper img {
+  margin: 20px;
+}
+
+#login-wrapper form {
+  margin: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+#login-wrapper input {
+  display: block;
+
+  margin-top: 20px;
+  padding: 0 6px 0 6px;
+  min-width: 600px;
+  height: 40px;
+
+  font-size: 20px;
+
+  background-color: #F5F5F5;
+  border: 2px solid #828282;
+  border-radius: 3px;
+}
+
+#login-wrapper p {
+  text-align: end;
+  font-size: 18px;
+  color: #828282;
+}
+
+#login-wrapper p:hover {
+  cursor: pointer;
+  color: #B2B2B2;
+  text-decoration: underline;
+}

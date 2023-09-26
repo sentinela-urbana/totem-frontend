@@ -12,6 +12,8 @@ button {
   font-size: 40px;
   font-family: 'Bebas Neue', sans-serif;
   text-transform: uppercase;
+
+  margin: 20px;
 }
 
 button:hover {
