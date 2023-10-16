@@ -1,0 +1,58 @@
+.cameraModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #00000066;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cameraModal main {
+  border-radius: 15px;
+  width: 30vw;
+  min-width: 300px;
+  height: 58vh;
+  min-height: 200px;
+  padding: 1.5vw;
+
+  background-color: #FFFFFF;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: calc(5px + .5vw);
+  color: #707070;
+}
+
+.cameraModal iframe {
+  width: 30vw;
+  min-width: 300px;
+  height: 45vh;
+  min-height: 150px;
+
+  border-radius: 5px;
+}
+
+.modalTextWrapper {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalLocations {
+  margin: 0;
+  line-height: .75vh;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

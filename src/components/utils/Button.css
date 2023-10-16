@@ -16,6 +16,29 @@ button {
   margin: 20px;
 }
 
+.modalBlue {
+  min-width: 135px;
+  height: 45px;
+
+  font-weight: 100;
+  font-size: 18px;
+
+  margin: 0;
+}
+
+.modalGray {
+  min-width: 135px;
+  height: 45px;
+
+  font-weight: 100;
+  font-size: 18px;
+
+  margin: 0;
+
+  background: #EEEEEE;
+  color: #707070;
+}
+
 button:hover {
   cursor: pointer;
 }
