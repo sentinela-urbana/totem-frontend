@@ -1,7 +1,10 @@
 import Button from './Button'
 import './CameraModal.css'
 
-const CameraModal = ({video, address, neighborhood, referencePoint, cep}) => {
+const CameraModal = ({video, address, neighborhood, referencePoint, cep, isOpen, setOpen}) => {
+
+  if (!isOpen) return (<></>)
+
   return (
     <div className='cameraModal'>
       <main>
@@ -15,7 +18,7 @@ const CameraModal = ({video, address, neighborhood, referencePoint, cep}) => {
         </div>
         <div className='buttonWrapper'>
           <Button title={'Liberar Chamada'} variant={'modalBlue'}/>
-          <Button title={'Fechar'} variant={'modalGray'}/>
+          <Button title={'Fechar'} variant={'modalGray'} onClick={() => setOpen(false)}/>
         </div>
       </main>
     </div>
