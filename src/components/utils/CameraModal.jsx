@@ -6,8 +6,8 @@ const CameraModal = ({video, address, neighborhood, referencePoint, cep, isOpen,
   if (!isOpen) return (<></>)
 
   return (
-    <div className='cameraModal'>
-      <main>
+    <div className='cameraModal' onClick={() => setOpen(false)}>
+      <main onClick={e => e.stopPropagation()}>
         <iframe className='cameraModalVideo' src={video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         <div className='modalTextWrapper'>
           <div className='modalLocations'>

@@ -1,3 +1,21 @@
+@keyframes slide-in {
+  from {
+    top: 175vh;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    background-color: #00000000;
+  }
+  to {
+    background-color: #00000066;
+  }
+}
+
 .cameraModal {
   position: fixed;
   top: 0;
@@ -10,9 +28,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: fade-in .5s;
 }
 
 .cameraModal main {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   border-radius: 15px;
   width: 30vw;
   min-width: 300px;
@@ -26,6 +52,13 @@
   font-weight: 400;
   font-size: calc(5px + .5vw);
   color: #707070;
+
+  animation: slide-in .5s;
+  transition: top 0.5s;
+}
+
+.cameraModal main:hover {
+  top: 175vh;
 }
 
 .cameraModal iframe {
