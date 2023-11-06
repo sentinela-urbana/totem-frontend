@@ -12,7 +12,7 @@ const Login = () => {
           <input type="text" id="senha" placeholder="Senha"/>
           <p>Esqueceu sua senha?</p>
         </form>
-        <Button title="Login"/>
+        <Button title="Login" href={'/home'}/>
       </div>
     </>
   )
