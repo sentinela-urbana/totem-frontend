@@ -57,10 +57,6 @@
   transition: top 0.5s;
 }
 
-.cameraModal main:hover {
-  top: 175vh;
-}
-
 .cameraModal iframe {
   width: 30vw;
   min-width: 300px;
