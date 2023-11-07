@@ -34,7 +34,7 @@
 #labels {
   display: flex;
   align-items: space-between;
-  gap: 10px
+  gap: 20px
 }
 
 #labels p {
