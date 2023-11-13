@@ -1,6 +1,6 @@
 import './Camera.css'
 
-const Camera = ({video, address, neighborhood, referencePoint, cep, cameraData, setCameraData, setOpen}) => {
+const Camera = ({video, address, neighborhood, referencePoint, cep, setCameraData, setOpen}) => {
 
   const updatedValue = {
     video: video,
