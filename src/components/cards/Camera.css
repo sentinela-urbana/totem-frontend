@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.camera iframe {
+.camera video {
   width: 20vw;
   min-width: 300px;
   height: 22vh;

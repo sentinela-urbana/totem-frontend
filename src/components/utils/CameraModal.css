@@ -57,7 +57,7 @@
   transition: top 0.5s;
 }
 
-.cameraModal iframe {
+.cameraModal video {
   width: 30vw;
   min-width: 300px;
   height: 45vh;

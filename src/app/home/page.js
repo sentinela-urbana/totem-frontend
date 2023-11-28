@@ -1,6 +1,5 @@
 'use client'
 
-import VideoPlayer from "@/components/VideoPlayer"
 import Camera from "@/components/cards/Camera"
 import Header from "@/components/layout/Header"
 import CameraModal from "@/components/utils/CameraModal"
@@ -19,19 +18,18 @@ const Home = () => {
         <h4>12 Totens de 12</h4>
       </div>
       <div id="camera-wrapper">
-        <Camera video='https://www.youtube.com/embed/hHmEgOAY3ao?si=1Uk1vgKY7tUfXVjI' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'} referencePoint={'Próximo ao Hospital Regional'} cep={'11632-788'} cameraData={cameraData} setCameraData={setCameraData} setOpen={setCameraModalIsOpen}/>
-        <Camera video='https://www.youtube.com/embed/qhgnylFSHvg?si=X3NScZklGaAdnhtW' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/ODKTITUPusM?si=_BxPR8Hmxc-qzvJ_' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/hHmEgOAY3ao?si=1Uk1vgKY7tUfXVjI' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/qhgnylFSHvg?si=X3NScZklGaAdnhtW' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/ODKTITUPusM?si=_BxPR8Hmxc-qzvJ_' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/hHmEgOAY3ao?si=1Uk1vgKY7tUfXVjI' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/qhgnylFSHvg?si=X3NScZklGaAdnhtW' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/ODKTITUPusM?si=_BxPR8Hmxc-qzvJ_' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
-        <Camera video='https://www.youtube.com/embed/hHmEgOAY3ao?si=1Uk1vgKY7tUfXVjI' address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 1970'} neighborhood={'Travessão'} referencePoint={'Próximo ao Hospital Regional'} cep={'11632-788'} cameraData={cameraData} setCameraData={setCameraData} setOpen={setCameraModalIsOpen}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 2970'} neighborhood={'Travessão'} referencePoint={'Próximo ao Hospital Internacional'} cep={'12332-111'} cameraData={cameraData} setCameraData={setCameraData} setOpen={setCameraModalIsOpen}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 3970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 4970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 5970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 6970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 7970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 8970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 9970'} neighborhood={'Travessão'}/>
+        <Camera address={'Av. José da Costa Pinheiro Júnior, 0970'} neighborhood={'Travessão'}/>
       </div>
       <CameraModal video={cameraData.video} address={cameraData.address} neighborhood={cameraData.neighborhood} referencePoint={cameraData.referencePoint} cep={cameraData.cep} isOpen={cameraModalIsOpen} setOpen={setCameraModalIsOpen}/>
-      <VideoPlayer />
     </div>
     </>
   )
