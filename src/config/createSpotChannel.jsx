@@ -21,23 +21,17 @@ const createSpotChannel = function (spot_id, token, connection) {
         if (connection.identifier !== data.name) {
           switch (data.type) {
             case "OFFER":
-              if (token === "surveillance") {
-                let offer = JSON.parse(data.sdp);
-                connection.createAnswer(offer);
-              }
+              let offer = JSON.parse(data.sdp);
+              connection.createAnswer(offer);
               break;
             case "ANSWER":
               console.log("TOKEN: ", token);
-              if (token === "spot" || token === "spot2") {
-                let answer = JSON.parse(data.sdp);
-                connection.receiveAnswer(answer);
-              }
+              let answer = JSON.parse(data.sdp);
+              connection.receiveAnswer(answer);
               break;
             case "CANDIDATE":
-              if (token !== "surveillance") {
-                let candidate = JSON.parse(data.sdp);
-                connection.addCandidate(candidate);
-              }
+              let candidate = JSON.parse(data.sdp);
+              connection.addCandidate(candidate);
               break;
             default:
               console.log(`Unknown data type: ${data.type}`);

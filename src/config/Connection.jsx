@@ -89,8 +89,6 @@ class Connection {
   }
 
   createOffer() {
-    if (this.role === "surveillance") return
-
     this.peerConnection
       .createOffer()
       .then((offer) => {
@@ -153,6 +151,10 @@ class Connection {
       `<<< Adding ICE candidate (${rtcCandidate.address} - ${rtcCandidate.relatedAddress})`
     )
     this.peerConnection.addIceCandidate(rtcCandidate)
+  }
+
+  startCall() {
+
   }
 }
 

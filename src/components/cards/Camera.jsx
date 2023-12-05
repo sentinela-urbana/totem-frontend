@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react"
 import Connection from '@/config/Connection'
 import createSpotChannel from "@/config/createSpotChannel.jsx"
 
-const Camera = ({video, address, neighborhood, referencePoint, cep, setCameraData, setOpen}) => {
+const Camera = ({address, neighborhood, referencePoint, cep, setCameraData, setOpen}) => {
 
   const localVideoRef = useRef(null)
   const remoteVideoRef = useRef(null)
@@ -22,7 +22,7 @@ const Camera = ({video, address, neighborhood, referencePoint, cep, setCameraDat
 
       // Setup remote video elements for the surveillance connection
       surveillanceConn.current.remoteStreamTargets = [
-        remoteVideoRef.current,
+        remoteVideoRef.current
       ]
 
       console.log(surveillanceConn.current.remoteStreamTargets)
@@ -32,20 +32,13 @@ const Camera = ({video, address, neighborhood, referencePoint, cep, setCameraDat
 
       // Get user media for the first spot
       navigator.mediaDevices
-        .getUserMedia({ video: true })
+        .getUserMedia({ video: true, audio: true })
         .then((stream) => {
           localVideoRef.current.srcObject = stream
           spotConn.current.localStream = stream
           spotConn.current.loadStream()
           spotConn.current.createOffer()
         })
-        .catch((error) =>
-          console.error("Error accessing media devices:", error)
-        )
-
-      // Get user media for the second spot
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
         .catch((error) =>
           console.error("Error accessing media devices:", error)
         )
