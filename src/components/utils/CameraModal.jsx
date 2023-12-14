@@ -1,12 +1,12 @@
 import Button from './Button'
 import './CameraModal.css'
 
-const CameraModal = ({video, address, neighborhood, referencePoint, cep, isOpen, setOpen}) => {
+const CameraModal = ({video, address, neighborhood, referencePoint, cep, isNotified, setNotified, isOpen, setOpen}) => {
 
   if (!isOpen) return (<></>)
 
   return (
-    <div className='cameraModal' onClick={() => setOpen(false)}>
+    <div className={isNotified ? 'notifiedCameraModal' : 'cameraModal'} onClick={() => setOpen(false)}>
       <main onClick={e => e.stopPropagation()}>
         <video className='cameraModalVideo' ref={video} autoPlay playsInline></video>
         <div className='modalTextWrapper'>
@@ -17,7 +17,10 @@ const CameraModal = ({video, address, neighborhood, referencePoint, cep, isOpen,
           <p className='modalCEP'>CEP: {cep}</p>
         </div>
         <div className='buttonWrapper'>
-          <Button title={'Liberar Chamada'} variant={'modalBlue'}/>
+          <Button title={'Finalizar Acompanhamento'} variant={'modalRed'} onClick={() => {
+            if (isNotified) setNotified(false)
+            else alert('Esta câmera não está sob acompanhamento.')
+            }}/>
           <Button title={'Fechar'} variant={'modalGray'} onClick={() => setOpen(false)}/>
         </div>
       </main>

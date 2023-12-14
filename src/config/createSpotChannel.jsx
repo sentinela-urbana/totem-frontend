@@ -1,45 +1,29 @@
-import { createConsumer } from "@rails/actioncable";
+import { createConsumer } from "@rails/actioncable"
 
-const createSpotChannel = function (spot_id, token, connection) {
-  let url = "ws://localhost:3000/cable";
-  const consumer = createConsumer(`${url}?token=${token}`);
+const createSpotChannel = function (spot_id, token, setCameraIsSpotted) {
+  let url = "wss://sentinela-urbana-49d7e73fc130.herokuapp.com/cable"
+  const consumer = createConsumer(`${url}?token=${token}`)
 
   return consumer.subscriptions.create(
     { channel: "SpotChannel", spot_id: spot_id },
     {
       connected() {
-        connection.channel = this;
-        console.log(`${token} connected`);
+        console.log('Connected')
       },
 
       disconnected() {
-        console.log(`${token} disconnected`);
+        console.log('Disconnected')
       },
 
       received(data) {
-        console.log(`${token} received data: `, data);
-        if (connection.identifier !== data.name) {
-          switch (data.type) {
-            case "OFFER":
-              let offer = JSON.parse(data.sdp);
-              connection.createAnswer(offer);
-              break;
-            case "ANSWER":
-              console.log("TOKEN: ", token);
-              let answer = JSON.parse(data.sdp);
-              connection.receiveAnswer(answer);
-              break;
-            case "CANDIDATE":
-              let candidate = JSON.parse(data.sdp);
-              connection.addCandidate(candidate);
-              break;
-            default:
-              console.log(`Unknown data type: ${data.type}`);
-          }
-        }
+        console.log(`${token} received data: `, data)
+        console.log("Spot called!")
+
+        alert("AVISO: Alguém precisa de acompanhamento!")
+        setCameraIsSpotted(true)
       },
     }
-  );
-};
+  )
+}
 
-export default createSpotChannel;
+export default createSpotChannel

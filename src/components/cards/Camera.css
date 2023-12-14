@@ -12,6 +12,8 @@
   min-height: 200px;
   padding: 10px;
 
+  position: relative;
+
   background-color: #FFFFFF;
 
   font-family: 'Roboto', sans-serif;
@@ -22,7 +24,33 @@
   cursor: pointer;
 }
 
-.camera video {
+.notifiedCamera {
+  display: flex;
+  flex: 0 0 1;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  width: 20vw;
+  min-width: 300px;
+  height: 30vh;
+  min-height: 200px;
+  padding: 10px;
+
+  position: relative;
+
+  background-color: #FFFFFF;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: calc(10px + .5vw);
+  color: #707070;
+
+  cursor: pointer;
+}
+
+video {
   width: 20vw;
   min-width: 300px;
   height: 22vh;
@@ -32,6 +60,27 @@
   border-radius: 3px;
 }
 
-.camera p {
+.notifiedCamera video {
+  border: 5px solid #FF0000;
+}
+
+h4 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 7.5%;
+}
+
+.notifiedCamera h4 {
+  display: block;
+}
+
+.cameraTextWrapper {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.cameraText {
   margin-top: 15px;
+  text-align: left;
 }
