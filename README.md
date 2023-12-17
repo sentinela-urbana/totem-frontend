@@ -21,7 +21,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 1. Clone o repositório:
 
 ```sh
-git clone https://github.com/alegandolfo/totem-frontend.git
+git clone https://github.com/sentinela-urbana/totem-frontend.git
 cd totem-server
 ```
 

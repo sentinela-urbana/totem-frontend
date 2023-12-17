@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+button {
+  border: none;
+  background: #004A86;
+  color: #FFF;
+
+  min-width: 250px;
+  height: 50px;
+  border-radius: 3px;
+
+  font-size: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+
+  margin: 20px;
+}
+
+.modalBlue {
+  min-width: 135px;
+  height: 45px;
+
+  font-weight: 100;
+  font-size: 18px;
+
+  margin: 0;
+}
+
+.modalRed {
+  min-width: 135px;
+  height: 45px;
+
+  font-weight: 100;
+  font-size: 18px;
+
+  margin: 0;
+
+  background: #DC143C;
+  color: #FFFFFF;
+}
+
+.modalGray {
+  min-width: 135px;
+  height: 45px;
+
+  font-weight: 100;
+  font-size: 18px;
+
+  margin: 0;
+
+  background: #EEEEEE;
+  color: #707070;
+}
+
+button:hover {
+  cursor: pointer;
+}

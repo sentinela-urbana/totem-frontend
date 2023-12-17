@@ -1,0 +1,113 @@
+@keyframes slide-in {
+  from {
+    top: 175vh;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    background-color: #00000000;
+  }
+  to {
+    background-color: #00000066;
+  }
+}
+
+.cameraModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #00000066;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fade-in .5s;
+}
+
+.notifiedCameraModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #00000066;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fade-in .5s;
+}
+
+main {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  border-radius: 15px;
+  /* width: 30vw;
+  min-width: 300px;
+  height: 58vh;
+  min-height: 450px; */
+  padding: 1.5vw;
+
+  background-color: #FFFFFF;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: calc(5px + .5vw);
+  color: #707070;
+
+  animation: slide-in .5s;
+  transition: top 0.5s;
+}
+
+.cameraModal video {
+  width: 30vw;
+  min-width: 300px;
+  height: 45vh;
+  min-height: 350px;
+
+  border-radius: 5px;
+}
+
+.notifiedCameraModal video {
+  width: 29.6vw;
+  min-width: 300px;
+  height: 45vh;
+  min-height: 350px;
+
+  border: 5px solid #FF0000;
+  border-radius: 5px;
+}
+
+.modalTextWrapper {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalLocations {
+  margin: 0;
+  line-height: .75vh;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
