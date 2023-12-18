@@ -33,13 +33,15 @@ npm install
 
 ## Configuração
 
-1. Compilar:
+1. Fazer uma requisição de login para o servidor e substituir o token recebido dentro da variável "loginToken" em ./src/app/home/page.js
+
+2. Compilar:
 
 ```
 npm run build
 ```
 
-2. Iniciar o servidor:
+3. Iniciar o servidor:
 
 ```
 npm start
